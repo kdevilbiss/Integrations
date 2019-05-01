@@ -25,7 +25,7 @@
         "url": "https://outlook.office.com/webhook/##TEAMS.WEBHOOK##/IncomingWebhook/##TEAMS.INCOMINGWEBHOOK##",
         "username": ""
     },
-    "description": "Courtesy of Jonathan Arnold in LogicMonitor Professional Services! Stolen by KD. :)",
+    "description": "Courtesy of LogicMonitor Professional Services.",
     "active": {
         "headers": [],
         "password": "********",
