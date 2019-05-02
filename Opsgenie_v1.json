@@ -1,0 +1,23 @@
+{
+    "enabledStatus": [
+        "active"
+    ],
+    "parseMethod": "",
+    "name": "Opsgenie",
+    "ack": null,
+    "clear": null,
+    "description": "Fill out your username and password below. Set the property ##OPSGENIE_API.KEY## at the root of your account - or on the applicable devices, or remove the token in the URL and replace it with the actual API key.\n\nOpsgenie LogicMonitor documentation: https://docs.opsgenie.com/docs/logicmonitor-integration",
+    "active": {
+        "headers": [],
+        "password": "********",
+        "method": "post",
+        "payload": "service=##WEBSITE##&alertid=##ALERTID##&alerttype=##ALERTTYPE##&alertstatus=##ALERTSTATUS##&level=##LEVEL##&host=##HOST##&datasource=##DATASOURCE##&eventsource=##EVENTSOURCE##&batchjob=##BATCHJOB##&group=##GROUP##&datapoint=##DATAPOINT##&start=##START##&finish=##FINISH##&duration=##DURATION##&value=##VALUE##&threshold=##THRESHOLD##&userdata=##USERDATA##&cmdline=##CMDLINE##&exitCode=##EXITCODE##&stdout=##STDOUT##&stderr=##STDERR##&agent=##AGENT_DESCRIPTION##&checkpoint=##CHECKPOINT##&datapointdesc=##DPDESCRIPTION##&hostdesc=##HOSTDESCRIPTION##&hostinfo=##system.sysinfo##&hostips=##system.ips##&hosturl=##DEVICEURL##&instance=##INSTANCE##&dsidesc=##DSIDESCRIPTION##&batchdesc=##BJDESCRIPTION##&dsdesc=##DSDESCRIPTION##&eventmsg=##LIMITEDMESSAGE##&eventlogmsg=##MESSAGE##&eventcode=##EVENTCODE##&eventtype=##TYPE##&eventuser=##USER##&eventlogfile=##LOGFILE##&eventsource=##SOURCENAME##&servicedetail=##DETAIL##&serviceurl=##URL##&servicegroup=##WEBSITEGROUP##&date=##DATE##&clearvalue=##CLEARVALUE##&hostname=##system.hostname##",
+        "payloadFormat": "formdata",
+        "url": "https://api.opsgenie.com/v1/json/logicmonitor?apiKey=##OPSGENIE_API.KEY##",
+        "username": ""
+    },
+    "update": null,
+    "type": "http",
+    "parseExpression": "",
+    "uiDetails": "{\"includeIDInHttpResponse\":false,\"multipleMode\":false}"
+}

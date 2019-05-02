@@ -1,0 +1,50 @@
+{
+    "enabledStatus": [
+        "active",
+        "ack",
+        "clear",
+        "update"
+    ],
+    "parseMethod": "",
+    "name": "Hipchat Server",
+    "ack": {
+        "headers": [],
+        "password": "********",
+        "method": "post",
+        "payload": "{\n    \"from\":  \"LogicMonitor\",\n    \"message_format\": \"text\",\n    \"message\": \"##ALERTDETAILURL## ##LEVEL## ##HOST## ##DATASOURCE##-##DATAPOINT##: ##VALUE## ##THRESHOLD## (##ALERTSTATUS##)\"\n}",
+        "payloadFormat": "json",
+        "url": "https://hipchat.com/v2/room/##hipchat_room_id##/notification?auth_token=##hipchat_api.pass##auth_token=##hipchat_api.pass##",
+        "username": ""
+    },
+    "clear": {
+        "headers": [],
+        "password": "********",
+        "method": "post",
+        "payload": "{\n    \"from\":  \"LogicMonitor\",\n    \"message_format\": \"text\",\n    \"message\": \"##ALERTDETAILURL## ##LEVEL## ##HOST## ##DATASOURCE##-##DATAPOINT##: ##VALUE## ##THRESHOLD## (##ALERTSTATUS##)\"\n}",
+        "payloadFormat": "json",
+        "url": "https://hipchat.com/v2/room/##hipchat_room_id##/notification?auth_token=##hipchat_api.pass##auth_token=##hipchat_api.pass##",
+        "username": ""
+    },
+    "description": "Send LogicMonitor alerts to on-premises Hipchat Servers (API v2). Please review LogicMonitor documentation available here:\nhttps://www.logicmonitor.com/support/settings/integrations/hipchat-integration/\n\nReplace 'hipchat.com' with the domain or URL for your company server, and follow the documentation to set the required properties appropriately.",
+    "active": {
+        "headers": [],
+        "password": "********",
+        "method": "post",
+        "payload": "{\n    \"from\":  \"LogicMonitor\",\n    \"message_format\": \"text\",\n    \"message\": \"##ALERTDETAILURL## ##LEVEL## ##HOST## ##DATASOURCE##-##DATAPOINT##: ##VALUE## ##THRESHOLD## (##ALERTSTATUS##)\"\n}",
+        "payloadFormat": "json",
+        "url": "https://hipchat.com/v2/room/##hipchat_room_id##/notification?auth_token=##hipchat_api.pass##auth_token=##hipchat_api.pass##",
+        "username": ""
+    },
+    "update": {
+        "headers": [],
+        "password": "********",
+        "method": "post",
+        "payload": "{\n    \"from\":  \"LogicMonitor\",\n    \"message_format\": \"text\",\n    \"message\": \"##ALERTDETAILURL## ##LEVEL## ##HOST## ##DATASOURCE##-##DATAPOINT##: ##VALUE## ##THRESHOLD## (##ALERTSTATUS##)\"\n}",
+        "payloadFormat": "json",
+        "url": "https://hipchat.com/v2/room/##hipchat_room_id##/notification?auth_token=##hipchat_api.pass##auth_token=##hipchat_api.pass##",
+        "username": ""
+    },
+    "type": "http",
+    "parseExpression": "",
+    "uiDetails": "{\"includeIDInHttpResponse\":false,\"multipleMode\":false}"
+}

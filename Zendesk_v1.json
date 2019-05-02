@@ -1,0 +1,50 @@
+{
+    "enabledStatus": [
+        "active",
+        "clear",
+        "update",
+        "ack"
+    ],
+    "parseMethod": "jsonPath",
+    "name": "Zendesk",
+    "ack": {
+        "headers": [],
+        "password": "********",
+        "method": "put",
+        "payload": "{\n  \"ticket\": {\n    \"status\": \"open\", \n    \"comment\": { \"body\": \"##MESSAGE##\", \"author_id\": ##zendesk.authorid## }\n  }\n}",
+        "payloadFormat": "json",
+        "url": "https://ZenDeskPortal.zendesk.com/api/v2/tickets/##EXTERNALTICKETID##.json",
+        "username": ""
+    },
+    "clear": {
+        "headers": [],
+        "password": "********",
+        "method": "put",
+        "payload": "{\n  \"ticket\": {\n    \"subject\":  \"##LEVEL## - ##HOST## ##INSTANCE##\", \"type\": \"incident\",\n    \"comment\":  { \"body\": \"Alert Cleared:\\nHost: ##HOST##\\nDatasource: ##DATASOURCE##\\nDatapoint: ##DATAPOINT##\\nLevel: ##LEVEL##\\n Start: ##START##\\nDuration: ##DURATION##\\nValue: ##VALUE##\\nReason: ##DATAPOINT## ##THRESHOLD##\"},\n    \"status\": \"solved\",\"priority\": \"normal\"\n  }\n}",
+        "payloadFormat": "json",
+        "url": "https://ZenDeskPortal.zendesk.com/api/v2/tickets/##EXTERNALTICKETID##.json",
+        "username": ""
+    },
+    "description": "Send LogicMonitor alerts to Zendesk. Please review LogicMonitor documentation available here: https://www.logicmonitor.com/support/settings/integrations/create-update-close-tickets-zendesk-response-alerts/\n\nReplace 'ZenDeskPortal' in the URL with the appropriate name, and fill out your credentials.",
+    "active": {
+        "headers": [],
+        "password": "********",
+        "method": "post",
+        "payload": "{\n  \"ticket\": {\n    \"subject\":  \"##LEVEL## - ##HOST## ##INSTANCE##\", \"type\": \"incident\",\n    \"comment\":  { \"body\": \"Host: ##HOST##\\nDatasource: ##DATASOURCE##\\nDatapoint: ##DATAPOINT##\\nLevel: ##LEVEL##\\n Start: ##START##\\nDuration: ##DURATION##\\nValue: ##VALUE##\\nReason: ##DATAPOINT## ##THRESHOLD##\"},\n    \"priority\": \"normal\"\n  }\n}",
+        "payloadFormat": "json",
+        "url": "https://ZenDeskPortal.zendesk.com/api/v2/tickets.json",
+        "username": ""
+    },
+    "update": {
+        "headers": [],
+        "password": "********",
+        "method": "put",
+        "payload": "{\n  \"ticket\": {\n    \"subject\":  \"##LEVEL## - ##HOST## ##INSTANCE##\", \"type\": \"incident\",\n    \"comment\":  { \"body\": \"Alert Escalated/De-escalated:\\nHost: ##HOST##\\nDatasource: ##DATASOURCE##\\nDatapoint: ##DATAPOINT##\\nLevel: ##LEVEL##\\n Start: ##START##\\nDuration: ##DURATION##\\nValue: ##VALUE##\\nReason: ##DATAPOINT## ##THRESHOLD##\"},\n    \"priority\": \"normal\"\n  }\n}",
+        "payloadFormat": "json",
+        "url": "https://ZenDeskPortal.zendesk.com/api/v2/tickets/##EXTERNALTICKETID##.json",
+        "username": ""
+    },
+    "type": "http",
+    "parseExpression": "ticket.id",
+    "uiDetails": "{\"includeIDInHttpResponse\":true,\"groupInfo\":[[\"clear\"],[\"update\"],[\"ack\"],[\"active\"]],\"multipleMode\":true}"
+}

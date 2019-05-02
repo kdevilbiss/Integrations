@@ -1,0 +1,41 @@
+{
+    "enabledStatus": [
+        "active",
+        "clear",
+        "ack"
+    ],
+    "parseMethod": "",
+    "name": "VictorOps",
+    "ack": {
+        "headers": [],
+        "password": "********",
+        "method": "post",
+        "payload": "{\n\t\"message_type\":\"Acknowledgement\",\n\t\"state_message\":\"##MESSAGE##\",\n\t\"entity_id\":\"##ALERTID##\",\n\t\"monitoring_tool\":\"LogicMonitor\",\n\t\"entity_display_name\":\"##LEVEL## alert on ##HOST##\",\n\t\"GROUP\":\"##GROUP##\",\n\t\"START\":\"##START##\",\n\t\"DESCRIPTION\":\"##SERVICEDESCRIPTION##\",\n\t\"SERVICE_CHECKPOINT\":\"##CHECKPOINT##\",\n\t\"SERVICE_GROUP\":\"##SERVICEGROUP##\",\n\t\"CLIENT_URL\":\"https://##COMPANY##.logicmonitor.com\",\n\t\"ALERT_URL\":\"##AlertDetailURL##\",\n\t\"ADMIN\":\"##ADMIN##\",\n\t\"ALERTID\":\"##ALERTID##\",\n\t\"ALERTTYPE\":\"##ALERTTYPE##\",\n\t\"ALERTSTATUS\":\"##ALERTSTATUS##\",\n\t\"CMDLINE\":\"##CMDLINE##\",\n\t\"DATAPOINT\":\"##DATAPOINT##\",\n\t\"DATASOURCE\":\"##DATASOURCE##\",\n\t\"DPDESCRIPTION\":\"##DPDESCRIPTION##\",\n\t\"DSIDESCRIPTION\":\"##DSIDESCRIPTION##\",\n\t\"DURATION\":\"##DURATION##\",\n\t\"EVENTCODE\":\"##EVENTCODE##\",\n\t\"EXITCODE\":\"##EXITCODE##\",\n\t\"FACILITY\":\"##FACILITY##\",\n\t\"GENERALCODE\":\"##GENERALCODE##\",\n\t\"HOST\":\"##HOST##\",\n\t\"INSTANCE\":\"##INSTANCE##\",\n\t\"LEVEL\":\"##LEVEL##\",\n\t\"LOGFILE\":\"##LOGFILE##\",\n\t\"MESSAGE\":\"##MESSAGE##\",\n\t\"SOURCENAME\":\"##SOURCENAME##\",\n\t\"SPECIFICCODE\":\"##SPECIFICCODE##\",\n\t\"STARTEPOCH\":\"##STARTEPOCH##\",\n\t\"STDERR\":\"##STDERR##\",\n\t\"STDOUT\":\"##STDOUT##\",\n\t\"THRESHOLD\":\"##THRESHOLD##\",\n\t\"TRAPOID\":\"##TRAPOID##\",\n\t\"TYPE\":\"##TYPE##\",\n\t\"VALUE\":\"##VALUE##\"\n}",
+        "payloadFormat": "json",
+        "url": "https://alert.victorops.com/integrations/generic/20131114/alert/##VICTOROPS_API.KEY##/##VICTOROPS_ROUTING.KEY##",
+        "username": ""
+    },
+    "clear": {
+        "headers": [],
+        "password": "********",
+        "method": "post",
+        "payload": "{\n\t\"message_type\":\"Recovery\",\n\t\"state_message\":\"##MESSAGE##\",\n\t\"entity_id\":\"##ALERTID##\",\n\t\"monitoring_tool\":\"LogicMonitor\",\n\t\"entity_display_name\":\"##LEVEL## alert on ##HOST##\",\n\t\"GROUP\":\"##GROUP##\",\n\t\"START\":\"##START##\",\n\t\"DESCRIPTION\":\"##SERVICEDESCRIPTION##\",\n\t\"SERVICE_CHECKPOINT\":\"##CHECKPOINT##\",\n\t\"SERVICE_GROUP\":\"##SERVICEGROUP##\",\n\t\"CLIENT_URL\":\"https://##COMPANY##.logicmonitor.com\",\n\t\"ALERT_URL\":\"##AlertDetailURL##\",\n\t\"ADMIN\":\"##ADMIN##\",\n\t\"ALERTID\":\"##ALERTID##\",\n\t\"ALERTTYPE\":\"##ALERTTYPE##\",\n\t\"ALERTSTATUS\":\"##ALERTSTATUS##\",\n\t\"CMDLINE\":\"##CMDLINE##\",\n\t\"DATAPOINT\":\"##DATAPOINT##\",\n\t\"DATASOURCE\":\"##DATASOURCE##\",\n\t\"DPDESCRIPTION\":\"##DPDESCRIPTION##\",\n\t\"DSIDESCRIPTION\":\"##DSIDESCRIPTION##\",\n\t\"DURATION\":\"##DURATION##\",\n\t\"EVENTCODE\":\"##EVENTCODE##\",\n\t\"EXITCODE\":\"##EXITCODE##\",\n\t\"FACILITY\":\"##FACILITY##\",\n\t\"GENERALCODE\":\"##GENERALCODE##\",\n\t\"HOST\":\"##HOST##\",\n\t\"INSTANCE\":\"##INSTANCE##\",\n\t\"LEVEL\":\"##LEVEL##\",\n\t\"LOGFILE\":\"##LOGFILE##\",\n\t\"MESSAGE\":\"##MESSAGE##\",\n\t\"SOURCENAME\":\"##SOURCENAME##\",\n\t\"SPECIFICCODE\":\"##SPECIFICCODE##\",\n\t\"STARTEPOCH\":\"##STARTEPOCH##\",\n\t\"STDERR\":\"##STDERR##\",\n\t\"STDOUT\":\"##STDOUT##\",\n\t\"THRESHOLD\":\"##THRESHOLD##\",\n\t\"TRAPOID\":\"##TRAPOID##\",\n\t\"TYPE\":\"##TYPE##\",\n\t\"VALUE\":\"##VALUE##\"\n}",
+        "payloadFormat": "json",
+        "url": "https://alert.victorops.com/integrations/generic/20131114/alert/##VICTOROPS_API.KEY##/##VICTOROPS_ROUTING.KEY##",
+        "username": ""
+    },
+    "description": "Send LogicMonitor alerts to VictorOps. Based on VictorOps support documentation available here:\nhttps://help.victorops.com/knowledge-base/victorops-logicmonitor2-integration/\n\nRequires VictorOps API and Routing keys to be set as device properties ##VICTOROPS_API.KEY## and ##VICTOROPS_ROUTING.KEY##. This can be done at the root of the account, at the group level, or the tokens in the URLs below can be replaced with the actual keys.",
+    "active": {
+        "headers": [],
+        "password": "********",
+        "method": "post",
+        "payload": "{\n\t\"message_type\":\"CRITICAL\",\n\t\"state_message\":\"##MESSAGE##\",\n\t\"entity_id\":\"##ALERTID##\",\n\t\"monitoring_tool\":\"LogicMonitor\",\n\t\"entity_display_name\":\"##LEVEL## alert on ##HOST##\",\n\t\"GROUP\":\"##GROUP##\",\n\t\"START\":\"##START##\",\n\t\"DESCRIPTION\":\"##SERVICEDESCRIPTION##\",\n\t\"SERVICE_CHECKPOINT\":\"##CHECKPOINT##\",\n\t\"SERVICE_GROUP\":\"##SERVICEGROUP##\",\n\t\"CLIENT_URL\":\"https://##COMPANY##.logicmonitor.com\",\n\t\"ALERT_URL\":\"##AlertDetailURL##\",\n\t\"ADMIN\":\"##ADMIN##\",\n\t\"ALERTID\":\"##ALERTID##\",\n\t\"ALERTTYPE\":\"##ALERTTYPE##\",\n\t\"ALERTSTATUS\":\"##ALERTSTATUS##\",\n\t\"CMDLINE\":\"##CMDLINE##\",\n\t\"DATAPOINT\":\"##DATAPOINT##\",\n\t\"DATASOURCE\":\"##DATASOURCE##\",\n\t\"DPDESCRIPTION\":\"##DPDESCRIPTION##\",\n\t\"DSIDESCRIPTION\":\"##DSIDESCRIPTION##\",\n\t\"DURATION\":\"##DURATION##\",\n\t\"EVENTCODE\":\"##EVENTCODE##\",\n\t\"EXITCODE\":\"##EXITCODE##\",\n\t\"FACILITY\":\"##FACILITY##\",\n\t\"GENERALCODE\":\"##GENERALCODE##\",\n\t\"HOST\":\"##HOST##\",\n\t\"INSTANCE\":\"##INSTANCE##\",\n\t\"LEVEL\":\"##LEVEL##\",\n\t\"LOGFILE\":\"##LOGFILE##\",\n\t\"MESSAGE\":\"##MESSAGE##\",\n\t\"SOURCENAME\":\"##SOURCENAME##\",\n\t\"SPECIFICCODE\":\"##SPECIFICCODE##\",\n\t\"STARTEPOCH\":\"##STARTEPOCH##\",\n\t\"STDERR\":\"##STDERR##\",\n\t\"STDOUT\":\"##STDOUT##\",\n\t\"THRESHOLD\":\"##THRESHOLD##\",\n\t\"TRAPOID\":\"##TRAPOID##\",\n\t\"TYPE\":\"##TYPE##\",\n\t\"VALUE\":\"##VALUE##\"\n}",
+        "payloadFormat": "json",
+        "url": "https://alert.victorops.com/integrations/generic/20131114/alert/##VICTOROPS_API.KEY##/##VICTOROPS_ROUTING.KEY##",
+        "username": ""
+    },
+    "update": null,
+    "type": "http",
+    "parseExpression": "",
+    "uiDetails": "{\"includeIDInHttpResponse\":false,\"groupInfo\":[[\"clear\"],[\"ack\"],[\"active\"]],\"multipleMode\":true}"
+}

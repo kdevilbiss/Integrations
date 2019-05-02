@@ -1,0 +1,50 @@
+{
+    "enabledStatus": [
+        "active",
+        "clear",
+        "ack",
+        "update"
+    ],
+    "parseMethod": "jsonPath",
+    "name": "Freshdesk",
+    "ack": {
+        "headers": [],
+        "password": "********",
+        "method": "post",
+        "payload": "{ \"body\":\"Note: ##MESSAGE##\" }",
+        "payloadFormat": "json",
+        "url": "http://freshdesk.com/api/v2/tickets/##EXTERNALTICKETID##/notes",
+        "username": "##FRESHDESK_API.KEY##"
+    },
+    "clear": {
+        "headers": [],
+        "password": "********",
+        "method": "put",
+        "payload": "{ \"description\": \"Alert Cleared\\nHost: ##HOST##\\nDatasource: ##DATASOURCE##\\nDatapoint: ##DATAPOINT##\\nLevel: ##LEVEL##\\n Start: ##START##\\nDuration: ##DURATION##\\nValue: ##VALUE##\\nReason: ##DATAPOINT## ##THRESHOLD##\", \"subject\": \"##LEVEL## - ##HOST## ##INSTANCE##\", \"requester_id\": ##freshdesk.requesterid##, \"priority\": 1, \"status\": 4 }",
+        "payloadFormat": "json",
+        "url": "https://freshdesk.com/api/v2/tickets/##EXTERNALTICKETID##",
+        "username": "##FRESHDESK_API.KEY##"
+    },
+    "description": "Send LogicMonitor Alerts to FreshDesk. Please review the LogicMonitor Community post documentation:\nhttps://communities.logicmonitor.com/topic/1132-basic-freshdesk-integration/\n\nReplace 'freshdesk.com' with the domain or URL for your company portal, and set properties ##FRESHDESK.REQUESTERID## and ##FRESHDESK_API.KEY## in the account (or change the tokens to the actual values.)",
+    "active": {
+        "headers": [],
+        "password": "********",
+        "method": "post",
+        "payload": "{ \"description\": \"Host: ##HOST##\\nDatasource: ##DATASOURCE##\\nDatapoint: ##DATAPOINT##\\nLevel: ##LEVEL##\\n Start: ##START##\\nDuration: ##DURATION##\\nValue: ##VALUE##\\nReason: ##DATAPOINT## ##THRESHOLD##\", \"subject\": \"##LEVEL## - ##HOST## ##INSTANCE##\", \"requester_id\": ##freshdesk.requesterid##, \"priority\": 1, \"status\": 2 }",
+        "payloadFormat": "json",
+        "url": "https://freshdesk.com/api/v2/tickets",
+        "username": "##FRESHDESK_API.KEY##"
+    },
+    "update": {
+        "headers": [],
+        "password": "********",
+        "method": "put",
+        "payload": "{ \"description\": \"Alert Escalated/De-escalated\\nHost: ##HOST##\\nDatasource: ##DATASOURCE##\\nDatapoint: ##DATAPOINT##\\nLevel: ##LEVEL##\\n Start: ##START##\\nDuration: ##DURATION##\\nValue: ##VALUE##\\nReason: ##DATAPOINT## ##THRESHOLD##\", \"subject\": \"##LEVEL## - ##HOST## ##INSTANCE##\", \"requester_id\": ##freshdesk.requesterid##}",
+        "payloadFormat": "json",
+        "url": "https://freshdesk.com/api/v2/tickets/##EXTERNALTICKETID##",
+        "username": "##FRESHDESK_API.KEY##"
+    },
+    "type": "http",
+    "parseExpression": "id",
+    "uiDetails": "{\"includeIDInHttpResponse\":true,\"groupInfo\":[[\"clear\"],[\"ack\"],[\"update\"],[\"active\"]],\"multipleMode\":true}"
+}
