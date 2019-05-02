@@ -1,0 +1,50 @@
+{
+    "enabledStatus": [
+        "active",
+        "ack",
+        "clear",
+        "update"
+    ],
+    "parseMethod": "",
+    "name": "Neptune.IO",
+    "ack": {
+        "headers": [],
+        "password": "********",
+        "method": "post",
+        "payload": "{\n  \"type\": \"##ALERTTYPE##\",\n  \"status\": \"##ALERTSTATUS##\",\n  \"level\": \"##LEVEL##\",\n  \"host\": \"##HOST##\",\n  \"datasource\": \"##DATASOURCE##\",\n  \"eventsource\": \"##EVENTSOURCE##\",\n  \"datapoint\": \"##DATAPOINT##\",\n  \"start\": \"##START##\",\n  \"duration\": \"##DURATION##\",\n  \"value\": \"##VALUE##\",\n  \"threshold\": \"##THRESHOLD##\",\n  \"id\": \"##ALERTID##\",\n  \"date\": \"##DATE##\",\n  \"dpdescription\": \"##DPDESCRIPTION##\",\n  \"dsdescription\": \"##DSDESCRIPTION##\",\n  \"startepoch\": \"##STARTEPOCH##\"\n}",
+        "payloadFormat": "json",
+        "url": "http://docs.neptune.io/docs/logicmonitor-integration",
+        "username": ""
+    },
+    "clear": {
+        "headers": [],
+        "password": "********",
+        "method": "post",
+        "payload": "{\n  \"type\": \"##ALERTTYPE##\",\n  \"status\": \"##ALERTSTATUS##\",\n  \"level\": \"##LEVEL##\",\n  \"host\": \"##HOST##\",\n  \"datasource\": \"##DATASOURCE##\",\n  \"eventsource\": \"##EVENTSOURCE##\",\n  \"datapoint\": \"##DATAPOINT##\",\n  \"start\": \"##START##\",\n  \"duration\": \"##DURATION##\",\n  \"value\": \"##VALUE##\",\n  \"threshold\": \"##THRESHOLD##\",\n  \"id\": \"##ALERTID##\",\n  \"date\": \"##DATE##\",\n  \"dpdescription\": \"##DPDESCRIPTION##\",\n  \"dsdescription\": \"##DSDESCRIPTION##\",\n  \"startepoch\": \"##STARTEPOCH##\"\n}",
+        "payloadFormat": "json",
+        "url": "http://docs.neptune.io/docs/logicmonitor-integration",
+        "username": ""
+    },
+    "description": "Please contact Neptune.IO for support: http://docs.neptune.io/docs/logicmonitor-integration",
+    "active": {
+        "headers": [],
+        "password": "********",
+        "method": "post",
+        "payload": "{\n  \"type\": \"##ALERTTYPE##\",\n  \"status\": \"##ALERTSTATUS##\",\n  \"level\": \"##LEVEL##\",\n  \"host\": \"##HOST##\",\n  \"datasource\": \"##DATASOURCE##\",\n  \"eventsource\": \"##EVENTSOURCE##\",\n  \"datapoint\": \"##DATAPOINT##\",\n  \"start\": \"##START##\",\n  \"duration\": \"##DURATION##\",\n  \"value\": \"##VALUE##\",\n  \"threshold\": \"##THRESHOLD##\",\n  \"id\": \"##ALERTID##\",\n  \"date\": \"##DATE##\",\n  \"dpdescription\": \"##DPDESCRIPTION##\",\n  \"dsdescription\": \"##DSDESCRIPTION##\",\n  \"startepoch\": \"##STARTEPOCH##\"\n}",
+        "payloadFormat": "json",
+        "url": "http://docs.neptune.io/docs/logicmonitor-integration",
+        "username": ""
+    },
+    "update": {
+        "headers": [],
+        "password": "********",
+        "method": "post",
+        "payload": "{\n  \"type\": \"##ALERTTYPE##\",\n  \"status\": \"##ALERTSTATUS##\",\n  \"level\": \"##LEVEL##\",\n  \"host\": \"##HOST##\",\n  \"datasource\": \"##DATASOURCE##\",\n  \"eventsource\": \"##EVENTSOURCE##\",\n  \"datapoint\": \"##DATAPOINT##\",\n  \"start\": \"##START##\",\n  \"duration\": \"##DURATION##\",\n  \"value\": \"##VALUE##\",\n  \"threshold\": \"##THRESHOLD##\",\n  \"id\": \"##ALERTID##\",\n  \"date\": \"##DATE##\",\n  \"dpdescription\": \"##DPDESCRIPTION##\",\n  \"dsdescription\": \"##DSDESCRIPTION##\",\n  \"startepoch\": \"##STARTEPOCH##\"\n}",
+        "payloadFormat": "json",
+        "url": "http://docs.neptune.io/docs/logicmonitor-integration",
+        "username": ""
+    },
+    "type": "http",
+    "parseExpression": "",
+    "uiDetails": "{\"includeIDInHttpResponse\":false,\"multipleMode\":false}"
+}
