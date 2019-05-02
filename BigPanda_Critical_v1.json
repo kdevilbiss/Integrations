@@ -1,0 +1,53 @@
+{
+    "enabledStatus": [
+        "active",
+        "ack",
+        "clear"
+    ],
+    "parseMethod": "",
+    "name": "Big Panda Critical",
+    "ack": {
+        "headers": [
+            {
+                "Authorization": "********"
+            }
+        ],
+        "password": "********",
+        "method": "post",
+        "payload": "{\n  \"app_key\": \"##BIGPANDA_APP.KEY##\",\n  \"alert_type\":\"##ALERTTYPE##\",\n  \"alert_id\":\"##ALERTID##\",\n  \"status\":\"acknowledged\",\n  \"error_level\":\"##LEVEL##\",\n  \"start\":\"##START##\",\n  \"startepoch\":\"##STARTEPOCH##\",\n  \"service\":\"##SERVICE##\",\n  \"service_url\":\"##URL##\",\n  \"service_group\":\"##SERVICEGROUP##\",\n  \"checkpoint\":\"##CHECKPOINT##\",\n  \"device_url\":\"##DEVICEURL##\",\n  \"device_ips\":\"##SYSTEM.IPS##\",\n  \"device_sysinfo\":\"##SYSTEM.SYSINFO##\",\n  \"value\":\"##VALUE##\",\n  \"detail\":\"##DETAIL##\",\n  \"message\":\"##MESSAGE##\",\n  \"host\":\"##HOST##\",\n  \"batchjob\":\"##BATCHJOB##\",\n  \"datasource\":\"##DATASOURCE##\",\n  \"facility\":\"##FACILITY##\",\n  \"instance\":\"##INSTANCE##\",\n  \"datapoint\":\"##DATAPOINT##\",\n  \"cmdline\":\"##CMDLINE##\",\n  \"finish\":\"##FINISH##\",\n  \"exitcode\":\"##EXITCODE##\",\n  \"userdata\":\"##USERDATA##\"\n  \"description\":\"##MESSAGE##\",\n}",
+        "payloadFormat": "json",
+        "url": "https://api.bigpanda.io/data/v2/alerts",
+        "username": ""
+    },
+    "clear": {
+        "headers": [
+            {
+                "Authorization": "********"
+            }
+        ],
+        "password": "********",
+        "method": "post",
+        "payload": "{\n  \"app_key\": \"##BIGPANDA_APP.KEY##\",\n  \"alert_type\":\"##ALERTTYPE##\",\n  \"alert_id\":\"##ALERTID##\",\n  \"status\":\"ok\",\n  \"error_level\":\"##LEVEL##\",\n  \"start\":\"##START##\",\n  \"startepoch\":\"##STARTEPOCH##\",\n  \"service\":\"##SERVICE##\",\n  \"service_url\":\"##URL##\",\n  \"service_group\":\"##SERVICEGROUP##\",\n  \"checkpoint\":\"##CHECKPOINT##\",\n  \"device_url\":\"##DEVICEURL##\",\n  \"device_ips\":\"##SYSTEM.IPS##\",\n  \"device_sysinfo\":\"##SYSTEM.SYSINFO##\",\n  \"value\":\"##VALUE##\",\n  \"detail\":\"##DETAIL##\",\n  \"message\":\"##MESSAGE##\",\n  \"host\":\"##HOST##\",\n  \"batchjob\":\"##BATCHJOB##\",\n  \"datasource\":\"##DATASOURCE##\",\n  \"facility\":\"##FACILITY##\",\n  \"instance\":\"##INSTANCE##\",\n  \"datapoint\":\"##DATAPOINT##\",\n  \"cmdline\":\"##CMDLINE##\",\n  \"finish\":\"##FINISH##\",\n  \"exitcode\":\"##EXITCODE##\",\n  \"userdata\":\"##USERDATA##\"\n  \"description\":\"##MESSAGE##\",\n}",
+        "payloadFormat": "json",
+        "url": "https://api.bigpanda.io/data/v2/alerts",
+        "username": ""
+    },
+    "description": "One of two LogicMonitor/ Big Panda Integrations recommended to send LogicMonitor alerts to Big Panda. Please review the Big Panda support documentation: https://docs.bigpanda.io/docs/logicmonitor\n\nRequires a Big Panda App Key to be set as device property ##BIGPANDA_APP.KEY##.\n\nThere isn't a native 'error' status on the Big Panda side, so we create (2) integrations, (2) escalation chains, and at least (3) alert rules; One alert rule that maps LogicMonitor critical alerts to Big Panda critical status (through the critical escalation chain,) and two alert rules that map LogicMonitor warning and error alerts to Big Panda warning alerts (through the warning escalation chain.)\n\nFor questions, please contact LogicMonitor support:\nhttps://www.logicmonitor.com/support/getting-started/advanced-logicmonitor-setup/get-support-resources/",
+    "active": {
+        "headers": [
+            {
+                "Authorization": "********"
+            }
+        ],
+        "password": "********",
+        "method": "post",
+        "payload": "{\n  \"app_key\": \"##BIGPANDA_APP.KEY##\",\n  \"alert_type\":\"##ALERTTYPE##\",\n  \"alert_id\":\"##ALERTID##\",\n  \"status\":\"critical\",\n  \"error_level\":\"##LEVEL##\",\n  \"start\":\"##START##\",\n  \"startepoch\":\"##STARTEPOCH##\",\n  \"service\":\"##SERVICE##\",\n  \"service_url\":\"##URL##\",\n  \"service_group\":\"##SERVICEGROUP##\",\n  \"checkpoint\":\"##CHECKPOINT##\",\n  \"device_url\":\"##DEVICEURL##\",\n  \"device_ips\":\"##SYSTEM.IPS##\",\n  \"device_sysinfo\":\"##SYSTEM.SYSINFO##\",\n  \"value\":\"##VALUE##\",\n  \"detail\":\"##DETAIL##\",\n  \"message\":\"##MESSAGE##\",\n  \"host\":\"##HOST##\",\n  \"batchjob\":\"##BATCHJOB##\",\n  \"datasource\":\"##DATASOURCE##\",\n  \"facility\":\"##FACILITY##\",\n  \"instance\":\"##INSTANCE##\",\n  \"datapoint\":\"##DATAPOINT##\",\n  \"cmdline\":\"##CMDLINE##\",\n  \"finish\":\"##FINISH##\",\n  \"exitcode\":\"##EXITCODE##\",\n  \"userdata\":\"##USERDATA##\"\n  \"description\":\"##MESSAGE##\",\n}",
+        "payloadFormat": "json",
+        "url": "https://api.bigpanda.io/data/v2/alerts",
+        "username": ""
+    },
+    "update": null,
+    "type": "http",
+    "parseExpression": "",
+    "uiDetails": "{\"includeIDInHttpResponse\":false,\"groupInfo\":[[\"ack\"],[\"clear\"],[\"active\"]],\"multipleMode\":true}"
+}
