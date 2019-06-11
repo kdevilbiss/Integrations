@@ -1,0 +1,46 @@
+{
+    "enabledStatus": [
+        "active",
+        "clear"
+    ],
+    "parseMethod": "jsonPath",
+    "name": "Status.io",
+    "ack": null,
+    "clear": {
+        "headers": [
+            {
+                "x-api-key": "##statusio.api.key##"
+            },
+            {
+                "x-api-id": "##statusio.api.id##"
+            }
+        ],
+        "password": "********",
+        "method": "post",
+        "payload": "{\n  \"statuspage_id\": \"##statusio.page.id##\",\n  \"incident_id\": \"##EXTERNALTICKETID##\",\n  \"incident_details\": \"The incident has been resolved.\",\n  \"notify_email\": \"1\",\n  \"notify_sms\": \"0\",\n  \"notify_webhook\": \"0\",\n  \"social\": \"0\",\n  \"irc\": \"0\",\n  \"hipchat\": \"0\",\n  \"slack\": \"0\"\n}",
+        "payloadFormat": "json",
+        "url": "https://api.status.io/v2/incident/resolve",
+        "username": ""
+    },
+    "description": "Tokens for credentials:\nStatus.io Page ID: ##statusio.page.id##, Status.io API ID: ##statusio.api.id##, Status.io API Key: ##statusio.api.key##, Infrastructure ID: \"##statusio.infra.id##\"",
+    "active": {
+        "headers": [
+            {
+                "x-api-key": "##statusio.api.key##"
+            },
+            {
+                "x-api-id": "##statusio.api.id##"
+            }
+        ],
+        "password": "********",
+        "method": "post",
+        "payload": "{\n  \"statuspage_id\": \" ##statusio.page.id##\",\n  \"infrastructure_affected\": [\n    \"##statusio.infra.id##\"\n  ],\n  \"incident_name\": \"Service Incident\",\n  \"incident_details\": \"An incident has occurred and we are experiencing a degradation in service. Please stand by while we work to resolve the issue.\",\n  \"notify_email\": \"1\",\n  \"notify_sms\": \"0\",\n  \"notify_webhook\": \"0\",\n  \"social\": \"0\",\n  \"irc\": \"0\",\n  \"hipchat\": \"0\",\n  \"slack\": \"0\",\n  \"current_status\": 500,\n  \"current_state\": 100,\n  \"all_infrastructure_affected\": \"0\"\n}",
+        "payloadFormat": "json",
+        "url": "https://api.status.io/v2/incident/create",
+        "username": ""
+    },
+    "update": null,
+    "type": "http",
+    "parseExpression": "result",
+    "uiDetails": "{\"includeIDInHttpResponse\":true,\"groupInfo\":[[\"clear\"],[\"active\"]],\"multipleMode\":true}"
+}
